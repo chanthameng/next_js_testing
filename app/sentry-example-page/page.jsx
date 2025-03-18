@@ -2,8 +2,17 @@
 
 import Head from "next/head";
 import * as Sentry from "@sentry/nextjs";
+import { useEffect } from "react";
+
 
 export default function Page() {
+  useEffect(() => {
+    // This code will only run on the client side
+    if (typeof window !== "undefined") {
+      // Any client-side specific code can go here
+    }
+  }, []);
+
   return (
     <div>
       <Head>
